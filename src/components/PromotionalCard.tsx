@@ -10,7 +10,7 @@ interface PromotionalCardProps {
 
 export default function PromotionalCard({ title, description, imageUrl, ctaText, ctaLink }: PromotionalCardProps) {
   return (
-    <div className="relative rounded-lg overflow-hidden shadow-lg">
+    <div className="relative rounded-lg overflow-hidden shadow-lg mt-10">
       <Image
         src={imageUrl}
         alt={title}

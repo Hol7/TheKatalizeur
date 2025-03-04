@@ -12,7 +12,7 @@ export const fetchArticles = async () => {
     const response = await axios.get(`${API_URL}/api/articles?populate=*`, {
       headers: { Authorization: `Bearer ${API_TOKEN}` },
     });
-    console.log('fetchArticles Response:', response.data.data);
+    // console.log('fetchArticles Response:', response.data.data);
 
     const articles = response.data.data;
     return articles;
@@ -21,6 +21,22 @@ export const fetchArticles = async () => {
     throw error;
   }
 };
+
+export const fetchSidebar = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/api/sidebar-trendis?populate=*`, {
+      headers: { Authorization: `Bearer ${API_TOKEN}` },
+    });
+    console.log('fetchSidebar Response:', response.data.data);
+
+    const articles = response.data.data;
+    return articles;
+  } catch (error) {
+    console.error('Error fetching fetchSidebar:', error);
+    throw error;
+  }
+};
+
 
 // export const fetchArticles = async () => {
 //   const response = await axios.get(`${API_URL}/api/articles?populate=*`, {
@@ -38,11 +54,11 @@ export const fetchArticleBySlug = async (slug: string) => {
     );
 
    
-    console.log('fetchArticleBySlug :', response.data);
+    // console.log('fetchArticleBySlug :', response.data);
 
     // Safely access the first article
     const article = response.data.data?.[0];
-    console.log('fetchArticleBySlug Response:', article);
+    // console.log('fetchArticleBySlug Response:', article);
 
     if (!article) {
       throw new Error(`No article found for slug: ${slug}`);
