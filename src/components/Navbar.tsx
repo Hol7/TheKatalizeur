@@ -1,6 +1,6 @@
 // import Link from 'next/link';
 // import { Button } from "@/components/ui/button"
-
+'use client'
 
 import { useState } from 'react';
 
@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-primary">NewsBlog</h1>
+        <h1 className="text-xl font-bold text-primary">The Katalizeur</h1>
         <div className="flex space-x-4 items-center">
           <button onClick={toggleDarkMode} className="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
             {darkMode ? (
