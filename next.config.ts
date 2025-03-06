@@ -14,6 +14,12 @@ module.exports = {
         port: '1337',     // Port where Strapi is running
         pathname: '/uploads/**', // Allow all paths under /uploads/
       },
+      {
+        protocol: 'https', // Use 'http' for local development
+        hostname: 'back-katalizeur.qashmo.com',
+        port: '1337',     // Port where Strapi is running
+        pathname: '/uploads/**', // Allow all paths under /uploads/
+      },
     ],
   },
 };
