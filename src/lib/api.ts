@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337';
+export const API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || 'https://back-katalizeur.qashmo.com/';
 const API_TOKEN = "d4dbb1a9679eb6a4a4349b76858b1c5f72f99b3b06b73754f86dea7873532340c5879937c50472a526949f4b951e04217cf69940e5607ae383b86e632ee95fb2593debbe0ae3be1992f5676d1c94a5f694d3b556ede2854bea3637c9dd34a0698e688f55338f1cb65aed90f14b6fd7e99a43e1aa808cc83c63465449b14f0de4"
 // export const fetchArticles = async () => {
 //   const response = await axios.get(`${API_URL}/api/articles?populate=*`);

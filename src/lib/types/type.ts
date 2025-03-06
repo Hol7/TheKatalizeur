@@ -20,5 +20,5 @@ export interface Article {
     author?: { // Optional author details
       name: string; // Name of the author
     };
-    blocks?: any[]; // Array of content blocks (optional)
+    blocks?: []; // Array of content blocks (optional)
   }

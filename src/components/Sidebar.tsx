@@ -51,7 +51,7 @@ export default async function Sidebar() {
             {article.map((article: Article)=>{
 
               return(
-                <li className="flex items-start">
+                <li className="flex items-start" key={article.id}>
                 <Image
                  src={`${API_URL}${article?.cover?.url || "/default-image.jpg"}`}
                   alt="Article Thumbnail"
@@ -103,6 +103,7 @@ export default async function Sidebar() {
       </aside>
     );
   } catch (error) {
+    console.log("error",error)
 
   }
   
